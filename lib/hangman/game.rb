@@ -40,6 +40,31 @@ module Hangman
 
           unless placeholder.include? Graphics::OBFUSCATION_CHAR
             puts Graphics::ALIVE
+            sleep 0.5
+            Graphics.clear_screen
+            puts Graphics::ALIVE2
+            sleep 0.5
+            Graphics.clear_screen
+            puts Graphics::ALIVE3
+            sleep 0.5
+            Graphics.clear_screen
+            puts Graphics::ALIVE
+            sleep 0.5
+            Graphics.clear_screen
+            puts Graphics::ALIVE2
+            sleep 0.5
+            Graphics.clear_screen
+            puts Graphics::ALIVE3
+            sleep 0.5
+            Graphics.clear_screen
+            puts Graphics::ALIVE
+            sleep 0.5
+            Graphics.clear_screen
+            puts Graphics::ALIVE2
+            sleep 0.5
+            Graphics.clear_screen
+            puts Graphics::ALIVE3
+            sleep 0.5
             puts "\n\nWELL DONE!! YOU SURVIVED"
             break
           end
