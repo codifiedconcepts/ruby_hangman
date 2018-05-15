@@ -22,7 +22,7 @@ module Hangman
         if word.include? char
           if guess.include? char
 
-              if char == ""
+              if char == "" # If they did not enter anything
                   puts "You need to enter a letter!"
                   puts 'Try again: ' + Graphics.obfuscate_word(word, guess)
                   placeholder = Graphics.obfuscate_word(word, guess)
@@ -46,6 +46,9 @@ module Hangman
         else
           if guess.include? char
             puts "You already tried '#{char}'. Yes, it is still wrong.. 🙄"
+            @wrong_tries = @wrong_tries
+          elsif !char.match(/^[[:alpha:]]$/) == true # If they did not guess a letter (special character)
+            puts "This is hangman! We need a letter!"
             @wrong_tries = @wrong_tries
           else
             puts "OH NOES! The word doesn't contain '#{char}'"
