@@ -44,8 +44,14 @@ module Hangman
             break
           end
         else
-          puts "OH NOES! The word doesn't contain '#{char}'"
-          @wrong_tries = @wrong_tries + 1
+          if guess.include? char
+            puts "You already tried '#{char}'. Yes, it is still wrong.. 🙄"
+            @wrong_tries = @wrong_tries
+          else
+            puts "OH NOES! The word doesn't contain '#{char}'"
+            @wrong_tries = @wrong_tries + 1
+            guess << char
+          end
 
           if wrong_tries == chances
             puts Graphics::DEAD
