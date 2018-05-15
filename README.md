@@ -9,6 +9,11 @@
     bundle install
     ```
 3. Play!!
+
+    On mac:
     ```
     bundle exec exe/hangman
     ```
+    On Windows:
+    ``` 
+    bundle exec ruby exe/hangman
